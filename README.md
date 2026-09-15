@@ -34,9 +34,11 @@ A Telegram bot built with TypeScript, Telegraf, and Prisma. It sends daily morni
    cd weather-telegram-bot
 
 2. **Install dependencies:**
+   
    npm install
 
-3. **Configure environment variables:**
+4. **Configure environment variables:**
+   
    Create a .env file in the project root:
    
    TELEGRAM=your_telegram_bot_token
@@ -45,12 +47,14 @@ A Telegram bot built with TypeScript, Telegraf, and Prisma. It sends daily morni
    
    DATABASE_URL="postgresql://user:password@localhost:5432/weather_db?schema=public"
 
-5. **Database Migration:**
+6. **Database Migration:**
+   
    Generate Prisma client and push schema to PostgreSQL:
    
    npx prisma migrate dev --name init
 
-7. **Start the Bot:**
+8. **Start the Bot:**
+   
    Development:
    
    npm run dev
