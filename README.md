@@ -56,5 +56,7 @@ A Telegram bot built with TypeScript, Telegraf, and Prisma. It sends daily morni
 
 #### Bot Usage
 /start — Initialize the bot and open main menu.
+
 ⚙️ Settings — View saved city and toggle notification status.
+
 ❓ Help — View user instructions.
