@@ -11,11 +11,13 @@ A Telegram bot built with TypeScript, Telegraf, and Prisma. It sends daily morni
 
 ## Tech Stack
 
-- **Language:** TypeScript
-- **Framework:** Telegraf
-- **Database & ORM:** PostgreSQL, Prisma
-- **External API:** AccuWeather API
-- **Utilities:** node-cron, date-fns, dotenv
+| Category | Technologies |
+|---|---|
+| Language | TypeScript |
+| Framework | Telegraf |
+| Database & ORM | PostgreSQL, Prisma |
+| External API | AccuWeather API |
+| Utilities | node-cron, date-fns, dotenv |
 
 ## Setup and Run
 
@@ -28,46 +30,49 @@ A Telegram bot built with TypeScript, Telegraf, and Prisma. It sends daily morni
 
 ### Installation
 
-1. **Clone the repository:**
+1. Clone the repository:
 
-   git clone [https://github.com/alexmods40-dev/weather-telegram-bot.git](https://github.com/alexmods40-dev/weather-telegram-bot.git)
+   ```bash
+   git clone https://github.com/alexmods40-dev/weather-telegram-bot.git
    cd weather-telegram-bot
+   ```
 
-2. **Install dependencies:**
-   
+2. Install dependencies:
+
+   ```bash
    npm install
+   ```
 
-4. **Configure environment variables:**
-   
-   Create a .env file in the project root:
-   
+3. Configure environment variables. Create a `.env` file in the project root:
+
+   ```env
    TELEGRAM=your_telegram_bot_token
-   
    API=your_accuweather_api_key
-   
    DATABASE_URL="postgresql://user:password@localhost:5432/weather_db?schema=public"
+   ```
 
-6. **Database Migration:**
-   
-   Generate Prisma client and push schema to PostgreSQL:
-   
+4. Generate the Prisma client and apply migrations:
+
+   ```bash
    npx prisma migrate dev --name init
+   ```
 
-8. **Start the Bot:**
-   
-   Development:
-   
+5. Start the bot:
+
+   ```bash
+   # Development mode
    npm run dev
 
-   Production:
-   
+   # Production build & start
    npm run build
-   
    npm start
+   ```
 
-#### Bot Usage
-/start — Initialize the bot and open main menu.
+## Bot Usage
 
-⚙️ Settings — View saved city and toggle notification status.
+| Command | Description |
+|---|---|
+| `/start` | Initialize the bot and open the main menu |
+| ⚙️ Settings | View saved city and toggle notification status |
+| ❓ Help | View user instructions |
 
-❓ Help — View user instructions.
